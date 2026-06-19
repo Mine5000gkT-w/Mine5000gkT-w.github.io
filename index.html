@@ -10,13 +10,11 @@ body{
     margin:0;
     font-family:Arial, sans-serif;
     color:rgb(192, 9, 237);
-    
     background:black;
 }
 
-
 .hero{
-    height:100vh;
+    min-height:100dvh;
     background:url("titelbild.jpeg") center/cover;
     display:flex;
     flex-direction:column;
@@ -25,9 +23,8 @@ body{
     text-align:center;
     padding:20px;
     position:relative;
+    box-sizing:border-box;
 }
-
-
 
 .hero-content{
     position:relative;
@@ -35,6 +32,7 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
+    width:100%;
 }
 
 .category{
@@ -56,17 +54,20 @@ body{
 h1{
     font-size:2.5rem;
     max-width:800px;
+    margin:0;
 }
 
 p{
     margin-top:10px;
     opacity:0.85;
 }
+
 .fade-in{
     opacity:0;
     animation:fadeIn 2s ease forwards;
     animation-delay:1s;
 }
+
 .fade-in2{
     opacity:0;
     animation:fadeIn 4s ease forwards;
@@ -84,12 +85,11 @@ p{
     }
 }
 
-
 .topic1-btn{
-    margin-top:30px;
+    margin-top:10px;
     padding:15px 35px;
     background:#c52281;
-    color:rgb(255, 255, 255);
+    color:white;
     text-decoration:none;
     border-radius:30px;
     font-size:1.1rem;
@@ -101,6 +101,37 @@ p{
     background:#861b5a;
 }
 
+@media (max-width:768px){
+
+    h1{
+        font-size:1.8rem;
+        line-height:1.2;
+    }
+
+    .category{
+        font-size:1.1rem;
+        margin-top:20px;
+    }
+
+    .button-group{
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .topic1-btn{
+        width:90%;
+        max-width:350px;
+        padding:12px 20px;
+        font-size:1rem;
+        box-sizing:border-box;
+    }
+
+    p{
+        font-size:0.95rem;
+    }
+}
 </style>
 </head>
 
@@ -110,29 +141,29 @@ p{
 
     <div class="hero-content">
 
-    <h1 class="fade-in">Klimaneutrale Energieversorgung Deutschlands 2040</h1>
+        <h1 class="fade-in">Klimaneutrale Energieversorgung Deutschlands 2040</h1>
 
-<p class="fade-in">11C | LMGU</p>
+        <p class="fade-in">11C | LMGU</p>
 
-<div class="category fade-in">Physikalische Aspekte</div>
-<div class="button-group">
-    <a class="topic1-btn fade-in2" href="PV.html">Photovoltaik (PV)</a>
-    <a class="topic1-btn fade-in2" href="windkraft.html">Windkraft der Zukunft</a>
-    <a class="topic1-btn fade-in2" href="Effizienz.html">Effizienz von Anlagen und Stromnetzen</a>
-    <a class="topic1-btn fade-in2" href="PV.html">Transport von Wasserstoff</a>
-    <a class="topic1-btn fade-in2" href="mobilitaet.html">Mobilität</a>
-</div>
+        <div class="category fade-in">Physikalische Aspekte</div>
 
-<div class="category fade-in">Geographische Aspekte</div>
-<div class="button-group">
-    <a class="topic1-btn fade-in2" href="PV.html">Energiewende</a>
-    <a class="topic1-btn fade-in2" href="PV.html">Wärmewende</a>
-    <a class="topic1-btn fade-in2" href="Effizienz.html">Außerpolitische Anforderungen</a>
-</div>
+        <div class="button-group">
+            <a class="topic1-btn fade-in2" href="PV.html">Photovoltaik (PV)</a>
+            <a class="topic1-btn fade-in2" href="windkraft.html">Windkraft der Zukunft</a>
+            <a class="topic1-btn fade-in2" href="Effizienz.html">Effizienz von Anlagen und Stromnetzen</a>
+            <a class="topic1-btn fade-in2" href="PV.html">Transport von Wasserstoff</a>
+            <a class="topic1-btn fade-in2" href="mobilitaet.html">Mobilität</a>
+        </div>
 
-</div>
+        <div class="category fade-in">Geographische Aspekte</div>
 
-</div>
+        <div class="button-group">
+            <a class="topic1-btn fade-in2" href="PV.html">Energiewende</a>
+            <a class="topic1-btn fade-in2" href="PV.html">Wärmewende</a>
+            <a class="topic1-btn fade-in2" href="Effizienz.html">Außerpolitische Anforderungen</a>
+        </div>
+
+    </div>
 
 </div>
 
